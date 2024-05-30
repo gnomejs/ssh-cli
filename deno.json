@@ -1,0 +1,49 @@
+{
+    "name": "@gnome/ssh-cli",
+    "version": "0.0.0",
+    "exports": {
+        ".": "./mod.ts",
+        "./scp": "./scp.ts",
+        "./sftp": "./sftp.ts",
+        "./ssh": "./ssh.ts",
+        "./ssh-add": "./ssh-add.ts",
+        "./ssh-agent": "./ssh-agent.ts",
+        "./ssh-keygen": "./ssh-keygen.ts",
+        "./ssh-keyscan": "./ssh-keyscan.ts",
+        "./sshd": "./sshd.ts"
+    },
+    "compilerOptions": {
+        "lib": ["deno.worker"]
+    },
+    "fmt": {
+        "indentWidth": 4,
+        "useTabs": false,
+        "lineWidth": 120,
+        "exclude": ["**/*.md"]
+    },
+
+    "tasks": {
+        "test": "deno test -A",
+        "coverage": "deno test --coverage=.artifacts/code-coverage -A",
+        "lcov": "deno coverage .artifacts/code-coverage --lcov > .artifacts/code-coverage.lcov",
+        "publish:test": "deno publish --dry-run --allow-dirty"
+    },
+
+    "publish": {
+        "include": [
+            "mod.ts",
+            "scp.ts",
+            "sftp.ts",
+            "ssh.ts",
+            "ssh-add.ts",
+            "ssh-agent.ts",
+            "ssh-keygen.ts",
+            "ssh-keyscan.ts",
+            "sshd.ts",
+            "README.md",
+            "LICENSE.md",
+            "deno.json"
+        ]
+    },
+    "imports": { "@gnome/exec": "jsr:@gnome/exec@^0.4.2" }
+}
