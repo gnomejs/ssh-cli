@@ -14,11 +14,11 @@
  * ```
  * @module
  */
-export * from "./scp.ts";
-export * from "./sftp.ts";
-export * from "./ssh.ts";
-export * from "./ssh-add.ts";
-export * from "./ssh-agent.ts";
-export * from "./ssh-keygen.ts";
-export * from "./ssh-keyscan.ts";
-export * from "./sshd.ts";
+export * from "./scp/mod.ts";
+export * from "./sftp/mod.ts";
+export * from "./cli.ts";
+export * from "./ssh-add/mod.ts";
+export * from "./ssh-agent/mod.ts";
+export * from "./ssh-keygen/mod.ts";
+export * from "./ssh-keyscan/mod.ts";
+export * from "./sshd/mod.ts";

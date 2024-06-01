@@ -1,16 +1,17 @@
 {
     "name": "@gnome/ssh-cli",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "exports": {
         ".": "./mod.ts",
-        "./scp": "./scp.ts",
-        "./sftp": "./sftp.ts",
-        "./ssh": "./ssh.ts",
-        "./ssh-add": "./ssh-add.ts",
-        "./ssh-agent": "./ssh-agent.ts",
-        "./ssh-keygen": "./ssh-keygen.ts",
-        "./ssh-keyscan": "./ssh-keyscan.ts",
-        "./sshd": "./sshd.ts"
+        "./cli": "./cli.ts",
+        "./scp": "./scp/mod.ts",
+        "./sftp": "./sftp/mod.ts",
+        "./ssh": "./cli.ts",
+        "./ssh-add": "./ssh-add/mod.ts",
+        "./ssh-agent": "./ssh-agent/mod.ts",
+        "./ssh-keygen": "./ssh-keygen/mod.ts",
+        "./ssh-keyscan": "./ssh-keyscan/mod.ts",
+        "./sshd": "./sshd/mod.ts"
     },
     "compilerOptions": {
         "lib": ["deno.worker"]
@@ -32,18 +33,18 @@
     "publish": {
         "include": [
             "mod.ts",
-            "scp.ts",
-            "sftp.ts",
-            "ssh.ts",
-            "ssh-add.ts",
-            "ssh-agent.ts",
-            "ssh-keygen.ts",
-            "ssh-keyscan.ts",
-            "sshd.ts",
+            "cli.ts",
+            "scp/mod.ts",
+            "sftp/mod.ts",
+            "ssh-add/mod.ts",
+            "ssh-agent/mod.ts",
+            "ssh-keygen/mod.ts",
+            "ssh-keyscan/mod.ts",
+            "sshd/mod.ts",
             "README.md",
             "LICENSE.md",
             "deno.json"
         ]
     },
-    "imports": { "@gnome/exec": "jsr:@gnome/exec@^0.4.2" }
+    "imports": { "@gnome/exec": "jsr:@gnome/exec@^0.4.4" }
 }
